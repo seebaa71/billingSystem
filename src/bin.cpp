@@ -18,9 +18,23 @@ void bin::availableProducts(){
 }
 
 int bin::amount() {
-    return 0;
+    int tmp =0;
+
+    for( auto it = listOfProducts.begin(); it != listOfProducts.end(); it++){
+        tmp++;
+    }
+
+    return tmp;
+
 }
 
 double bin::amountOf() {
-    return 0;
+    double tmp =0;
+    for( auto it = listOfProducts.begin(); it != listOfProducts.end(); it++){
+        product tmp1 = *it;
+
+        tmp += tmp1.getPrice();
+    }
+    return tmp;
+
 }

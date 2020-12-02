@@ -10,6 +10,7 @@
 #include "product.h"
 #include "calculator.h"
 
+
 using namespace std;
 class bin : public calculator {
 
