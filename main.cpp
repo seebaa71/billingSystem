@@ -3,29 +3,40 @@
 #include "bin.h"
 #include <string>
 #include <fstream>
+#include <QApplication>
+#include <QDebug>
+
+#include <qpushbutton.h>
+
 
 using namespace std;
-int main(){
-    std::fstream file;
-    file.open( "data_file.txt", fstream::out);
-    if( file.is_open()){
-        if(file.good()){
-        }
-        else{
-            cout << "The file is incorrect!" << endl;
-            return 1;
-        }
-    }
-    else{
-        cout << "The file wasnt correctly opened!";
-        return 1;
-    }
-    bin *first = new bin();
-    for(int i =0 ; i< 20 ; i ++) {
-        product *example = new product("Something nice", 10.32, "10.10.2020");
-        first->setProductOnList(*example);
-    }
+int main(int argc, char **argv){
+    QApplication a( argc, argv );
 
-    cout << "Price of all product is accrodingly: "<<first->amountOf() <<endl;
+    QPushButton hello( "Hello world!", 0 );
+    hello.resize( 200, 200 );
+    hello.show();
+    return a.exec();
+//    std::fstream file;
+//    file.open( "data_file.txt", fstream::out);
+//    if( file.is_open()){
+//        if(file.good()){
+//        }
+//        else{
+//            cout << "The file is incorrect!" << endl;
+//            return 1;
+//        }
+//    }
+//    else{
+//        cout << "The file wasnt correctly opened!";
+//        return 1;
+//    }
+//    bin *first = new bin();
+//    for(int i =0 ; i< 20 ; i ++) {
+//        product *example = new product("Something nice", 10.32, "10.10.2020");
+//        first->setProductOnList(*example);
+//    }
+//
+//    cout << "Price of all product is accrodingly: "<<first->amountOf() <<endl;
 
 }
