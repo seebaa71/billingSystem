@@ -7,9 +7,8 @@ include_directories(src)
 set(
         SOURCE_FILES
         main.cpp
-        src/product.cpp include/product.h src/bin.cpp include/bin.h src/calculator.cpp include/calculator.h)
-add_executable(billingProject ${SOURCE_FILES} include/product.h src/bin.cpp include/bin.h src/calculator.cpp include/calculator.h)
+        src/product.cpp include/product.h src/binProducts.cpp include/binProducts.h src/calculator.cpp include/calculator.h)
+add_executable(billingProject ${SOURCE_FILES} include/product.h src/binProducts.cpp include/binProducts.h src/calculator.cpp include/calculator.h)
 find_package(Qt5Widgets REQUIRED)
 target_link_libraries(billingProject Qt5::Core)
 target_link_libraries(billingProject Qt5::Widgets)
-

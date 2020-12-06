@@ -2,8 +2,8 @@
 // Created by Sebastian Kamraj on 01/12/2020.
 //
 
-#ifndef BILLINGPROJECT_BIN_H
-#define BILLINGPROJECT_BIN_H
+#ifndef BILLINGPROJECT_BINPRODUCTS_H
+#define BILLINGPROJECT_BINPRODUCTS_H
 #include <vector>
 #include <string>
 #include <iostream>
@@ -12,7 +12,7 @@
 
 
 using namespace std;
-class bin : public calculator {
+class binProducts : public calculator {
 
 public:
     vector<product> listOfProducts;
@@ -24,4 +24,4 @@ public:
 };
 
 
-#endif //BILLINGPROJECT_BIN_H
+#endif //BILLINGPROJECT_BINPRODUCTS_H

@@ -2,13 +2,13 @@
 // Created by Sebastian Kamraj on 01/12/2020.
 //
 
-#include "bin.h"
+#include "binProducts.h"
 
-void bin::setProductOnList(product tmp){
+void binProducts::setProductOnList(product tmp){
 
     auto it = listOfProducts.insert(listOfProducts.end(),tmp);
 }
-void bin::availableProducts(){
+void binProducts::availableProducts(){
 
    for( auto it = listOfProducts.begin(); it != listOfProducts.end(); it++){
        cout << *it << endl;
@@ -17,7 +17,7 @@ void bin::availableProducts(){
 
 }
 
-int bin::amount() {
+int binProducts::amount() {
     int tmp =0;
 
     for( auto it = listOfProducts.begin(); it != listOfProducts.end(); it++){
@@ -28,7 +28,7 @@ int bin::amount() {
 
 }
 
-double bin::amountOf() {
+double binProducts::amountOf() {
     double tmp =0;
     for( auto it = listOfProducts.begin(); it != listOfProducts.end(); it++){
         product tmp1 = *it;
