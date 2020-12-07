@@ -3,44 +3,39 @@
 #include "binProducts.h"
 #include <string>
 #include <fstream>
+#include <memory>
 #include <QApplication>
 #include <QDebug>
 #include <QTableView>
-#include <QPushButton>
 #include <QMainWindow>
 #include <QLabel>
-
+#include <QtCore>
+#include <QtGui>
 
 using namespace std;
 int main(int argc, char **argv){
     QApplication a( argc, argv );
     QMainWindow mainWindow;
     QLabel *label = new QLabel(&mainWindow);
-    QString allProducts = "All products";
+    QString allProducts = "";
 
-    std::fstream file;
-    file.open( "data_file.txt", fstream::out);
-    if( file.is_open()){
-        if(file.good()){
-        }
-        else{
-            cout << "The file is incorrect!" << endl;
-            return 1;
-        }
-    }
-    else{
-        cout << "The file wasnt correctly opened!";
-        return 1;
-    }
-  binProducts *first = new binProducts();
+    int decision = 0;
+    // Opening file to store elements
+
+
+
+    binProducts *first = new binProducts();
     for(int i =0 ; i< 20 ; i ++) {
         product *example = new product("Something nice", 10.32, "10.10.2020");
         first->setProductOnList(*example);
     }
+    first->writeToFile();
 
-    cout << "Price of all product is accrodingly: "<<first->amountOf() <<endl;
-    allProducts += first->amountOf();
+
+    // Displaying label with text
     label->setText(allProducts);
     mainWindow.show();
+    delete first;
+
     return a.exec();
 }

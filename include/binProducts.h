@@ -18,7 +18,8 @@ public:
     vector<product> listOfProducts;
     void setProductOnList(product tmp);
     void availableProducts();
-
+    string allProducts();
+    void writeToFile();
     virtual int amount();
     virtual double amountOf();
 };
